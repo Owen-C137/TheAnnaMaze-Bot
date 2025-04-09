@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
+import os
 
 intents = discord.Intents.default()
 intents.members = True
@@ -71,4 +72,4 @@ async def on_member_join(member):
         print(f"Could not send DM to {member.name}: {e}")
 
 
-bot.run('MTM1NjU4NzU3OTU0OTY4MzgyMw.GIfrZl.CEzHWUmy05CQaZmMIFqLNPVK4ClXS2JGvkCgrI')
+bot.run(os.getenv('DISCORD_TOKEN'))
